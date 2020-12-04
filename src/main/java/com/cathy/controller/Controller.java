@@ -46,6 +46,6 @@ public class Controller {
 	@ExceptionHandler(NullPointerException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	public String Error() {
-		return ("Origin or Destination does not exist or invalid");
+		return  "no"; //("Origin or Destination does not exist or invalid")
 	}
 }
