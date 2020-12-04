@@ -95,8 +95,9 @@ class CitiestConnectionApplicationTests {
 	
 	@Test
 	public void badRequest() {
-        ResponseEntity<String> response = restTemplate.exchange("/connected?origin=none&destination=none", HttpMethod.GET, HttpEntity.EMPTY, String.class);
-        Assert.assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
+        	ResponseEntity<String> response = restTemplate.exchange("/connected?origin=none&destination=none", HttpMethod.GET, HttpEntity.EMPTY, String.class);
+        	Assert.assertEquals(response.getStatusCode(), HttpStatus.BAD_REQUEST);
+		Assert.assertEquals("no", response.getBody());
 	}
 
 }
